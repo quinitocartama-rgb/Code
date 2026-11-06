@@ -36,7 +36,8 @@
   }
   /* mismo tamaño visual que en el reverso (21 mm alto / 34 mm ancho) */
   .front .logos .garo { display: block; height: 19.5mm; }
-  .front .logos .occ { display: block; width: 31.5mm; }
+  .front .logos .occ { display: block; width: 31.5mm; transform: translateX(-1.8mm); }
+  /* centrado óptico: el peso visual de Occident cae a la derecha (texto), se compensa */
   .front .divider {
     position: absolute; left: 40.5mm; top: 11mm; bottom: 12mm;
     width: 0.35mm; background: var(--garo);
