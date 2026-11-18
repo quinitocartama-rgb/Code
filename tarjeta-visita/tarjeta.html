@@ -35,8 +35,8 @@
     gap: 3.5mm;
   }
   /* mismo tamaño visual que en el reverso (21 mm alto / 34 mm ancho) */
-  .front .logos .garo { display: block; height: 19.5mm; }
-  .front .logos .occ { display: block; width: 31.5mm; transform: translateX(-1.8mm); }
+  .front .logos .garo { display: block; height: 21.5mm; }
+  .front .logos .occ { display: block; width: 28.5mm; transform: translateX(-1.65mm); }
   /* centrado óptico: el peso visual de Occident cae a la derecha (texto), se compensa */
   .front .divider {
     position: absolute; left: 40.5mm; top: 11mm; bottom: 12mm;
@@ -105,11 +105,15 @@
   .addr .street {
     font-weight: 500; font-size: 6.8pt; line-height: 1.3; color: var(--muted); margin-top: 0.5mm;
   }
+  /* el número queda centrado con los textos; el icono cuelga a su izquierda */
   .addr .tel {
-    margin-top: 1.8mm; display: flex; align-items: center; gap: 1.2mm;
+    margin-top: 1.8mm; position: relative; display: inline-block;
     font-weight: 700; font-size: 8.5pt; letter-spacing: 0.03em; white-space: nowrap; color: var(--ink);
   }
-  .addr .tel svg { width: 2.8mm; height: 2.8mm; fill: var(--garo); flex: none; }
+  .addr .tel svg {
+    position: absolute; right: calc(100% + 1.2mm); top: 50%; transform: translateY(-50%);
+    width: 2.8mm; height: 2.8mm; fill: var(--garo);
+  }
   .back .band {
     position: absolute; left: 0; right: 0; bottom: 0; height: 2.2mm; background: var(--garo);
   }
